@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
+
+:root {
+    --blue: #5356ff;
+    --blueish: #378ce7;
+    --malibu: #67c6e3;
+    --sky: #dff5ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.main {
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.optionsList {
+    width: 100vw;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--blue);
+}
+
+.optionsList li {
+    list-style: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardSection {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+    place-content: center;
+}
+
+.card {
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 0 1rem;
+    background-color: var(--sky);
+    border-radius: 0.4rem;
+}
+
+.cardTitle {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: black;
+    margin: 1rem;
+}
+
+.movieImage {
+    width: 250px;
+    height: fit-content;
+    object-fit: contain;
+    border-radius: 0.3rem;
+}
+
+.generalButton {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    color: white;
+}
+.primary {
+    background-color: var(--malibu);
+    color: white;
+}
+
+.secondary {
+    background-color: var(--blue);
+    color: rgb(66, 66, 66);
+}
+
+.container {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--sky);
+    border-radius: 0.4rem;
+}
+
+.container form {
+    min-width: 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container form input {
+    height: 40px;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.2rem 0.8rem;
+    margin: 0.3rem 0;
+    outline: none;
+}
+
+.container form textarea {
+    height: 180px;
+    border-radius: 0.3rem;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+}
+
+.notFound {
+    color: var(--blueish);
+}
+
+.addMovie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerAdd {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerAdd h3 {
+    padding-left: 1rem;
+}
+
+.cancelBtn {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    color: var(--blueish);
+}
+
+.footer {
+    width: 100vw;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+.footer img {
+    width: 150px;
+    padding: 1rem;
+}
+
+@media (min-width: 650px) {
+    .cardSection {
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .wrapper {
+        flex-direction: row;
+    }
+}
