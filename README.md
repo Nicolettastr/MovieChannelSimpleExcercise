@@ -1,4 +1,4 @@
-# Movie Web App
+# Movie Channel Web App
 
 This is a simple web application created to showcase movies. It is designed for practice purposes, focusing on various fundamental concepts including filtering, state management, functions, events, onchange and onClick handling, as well as delete and edit functionalities along with conditionals.
 
