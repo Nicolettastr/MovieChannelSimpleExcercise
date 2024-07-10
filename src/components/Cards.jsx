@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import Button from "./Button";
 import Edit from "./Edit";
 import { getLocalStorage } from "../helpers/AddToStorage";
-import notFound from "../../public/notFound.avif";
 
 const Cards = ({ cards, setMoviesList, edit, handleEdit, setEdit }) => {
     const handleDelete = (id) => {

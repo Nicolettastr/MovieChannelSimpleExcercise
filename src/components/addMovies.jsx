@@ -1,15 +1,10 @@
-import { useState } from "react";
 import { addToStorage } from "../helpers/AddToStorage";
 import { ImCancelCircle } from "react-icons/im";
 import Button from "./Button";
 
+// eslint-disable-next-line react/prop-types
 const AddMovies = ({ setMoviesList, changeAdd }) => {
     const ComponentTitle = "Add Movie";
-    const [movieState, setMovieState] = useState({
-        title: "",
-        description: "",
-        image: "",
-    });
 
     const getFormValue = (event) => {
         event.preventDefault();
@@ -25,8 +20,6 @@ const AddMovies = ({ setMoviesList, changeAdd }) => {
             description,
             image,
         };
-
-        setMovieState(movie);
 
         addToStorage("movies", movie);
 
@@ -56,12 +49,14 @@ const AddMovies = ({ setMoviesList, changeAdd }) => {
                     id='title'
                     placeholder='Title'
                     name='title'
+                    required
                 />
                 <input
                     type='text'
                     id='image'
                     placeholder='Image Link'
                     name='Image'
+                    required
                 />
                 <textarea
                     placeholder='Description'
@@ -69,6 +64,7 @@ const AddMovies = ({ setMoviesList, changeAdd }) => {
                     name='description'
                     cols='30'
                     rows='10'
+                    required
                 ></textarea>
                 <input
                     className='generalButton primary'
