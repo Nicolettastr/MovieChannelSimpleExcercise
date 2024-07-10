@@ -51,7 +51,7 @@ function App() {
                         )}
                     </aside>
                     <section className='cardSection'>
-                        {moviesList.length > 0 ? (
+                        {moviesList ? (
                             moviesList.map((card, index) => (
                                 <Cards
                                     key={index}
