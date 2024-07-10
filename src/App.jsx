@@ -51,18 +51,20 @@ function App() {
                         )}
                     </aside>
                     <section className='cardSection'>
-                        {moviesList
-                            ? moviesList.map((card, index) => (
-                                  <Cards
-                                      key={index}
-                                      cards={card}
-                                      setMoviesList={setMoviesList}
-                                      handleEdit={handleEdit}
-                                      edit={edit}
-                                      setEdit={setEdit}
-                                  />
-                              ))
-                            : "No movies available, add some"}
+                        {moviesList.length > 0 ? (
+                            moviesList.map((card, index) => (
+                                <Cards
+                                    key={index}
+                                    cards={card}
+                                    setMoviesList={setMoviesList}
+                                    handleEdit={handleEdit}
+                                    edit={edit}
+                                    setEdit={setEdit}
+                                />
+                            ))
+                        ) : (
+                            <p>No movies available, add some</p>
+                        )}
                     </section>
                 </section>
             </div>
